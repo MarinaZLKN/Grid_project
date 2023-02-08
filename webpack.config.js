@@ -5,6 +5,8 @@ const filename = (ext) => isDev ? `[name].${ext}`: `[name].[contenthash].${ext}`
 
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
     //как сборщик будет понимать ту папку, в которой хранятся все ассеты
     context: path.resolve(__dirname, 'src'),
@@ -19,10 +21,22 @@ module.exports = {
             template: path.resolve(__dirname, 'src/index.html'), //откуда берутся данные
             filename: 'index.html',
             //сжимаем все, если mode в prod
-            minify: {
-                collapseWhitespace: isProd,
-            }
+            // minify: {
+            //     collapseWhitespace: isProd,
+            // }
         }),
-        new CleanWebpackPlugin()
-    ]
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: `./css/${filename('css')}`
+        })
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css.$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            }
+        ]
+    }
+
 }
