@@ -4,7 +4,7 @@ const isProd = !isDev;
 const filename = (ext) => isDev ? `[name].${ext}`: `[name].[contenthash].${ext}`;
 
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 module.exports = {
     //как сборщик будет понимать ту папку, в которой хранятся все ассеты
     context: path.resolve(__dirname, 'src'),
@@ -20,8 +20,9 @@ module.exports = {
             filename: 'index.html',
             //сжимаем все, если mode в prod
             minify: {
-                collapseWhitespace: isProd
+                collapseWhitespace: isProd,
             }
-        })
+        }),
+        new CleanWebpackPlugin()
     ]
 }
