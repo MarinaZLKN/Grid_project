@@ -14,7 +14,8 @@ module.exports = {
     entry: './js/main.js',
     output: {
         filename: `./js/${filename('js')}`,
-        path: path.resolve(__dirname, 'app')
+        path: path.resolve(__dirname, 'app'),
+        assetModuleFilename: path.join('img', '[name].[ext]'),
     },
     devServer: {
         watchFiles: path.resolve(__dirname, 'app'),
@@ -42,6 +43,17 @@ module.exports = {
             {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
+            {
+                test: /\.svg$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: path.join('img', '[name].[contenthash][ext]'),
+                }
             }
 
             // {

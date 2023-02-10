@@ -12,7 +12,7 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(552px, auto) minmax(467px, auto) minmax(16px, auto) auto;
+  grid-template-rows: minmax(500px, auto) minmax(467px, auto) minmax(16px, auto) auto;
   grid-row-gap: 35px;
 
   .grid-item {
@@ -22,6 +22,16 @@ body {
   .header{
     display: grid;
     grid-template-columns: 230px 20px 1fr 1fr 1fr;
+
+    .image_1 {
+      background-image: url("../img/traveler.jpg");
+    }
+    .image_2 {
+      background-image: url("../img/horses.jpg");
+    }
+    .image_3 {
+      background-image: url("../img/man-hands.jpg");
+    }
   }
 
   .statistic {
