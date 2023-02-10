@@ -1,8 +1,40 @@
-$font-size: 1rem;
-$font-color: blue;
+.wrapper{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(552px, auto) minmax(467px, auto) minmax(16px, auto) auto;
+  grid-row-gap: 35px;
 
-html {
-  font-size: $font-size;
-  color: $font-color;
+  .grid-item {
+    border: 1px solid black;
+  }
 
+  .header{
+    display: grid;
+    grid-template-columns: 230px 20px 1fr 1fr 1fr;
+  }
+
+  .statistic {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: 360px 1fr 1fr;
+    grid-template-rows: 370px 370px;
+    grid-gap: 19px;
+
+    .grid-item:first-child{
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .grid-item:nth-child(2){
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
 }
