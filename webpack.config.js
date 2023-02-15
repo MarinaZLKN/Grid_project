@@ -44,6 +44,10 @@ module.exports = {
     ],
     module: {
         rules: [
+            {
+                test: /\.html$/,
+                loader: 'html-loader',
+            },
             // {
             //     test: /\.(scss|css)$/,
             //     use: ['style-loader', 'css-loader', 'sass-loader'],
