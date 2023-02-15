@@ -18,7 +18,8 @@ module.exports = {
     output: {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
-        assetModuleFilename: path.join('img', '[name].[ext]'),
+        assetModuleFilename: 'images/[name][ext]',
+            //path.join('img', '[name].[ext]'),
     },
     devServer: {
         watchFiles: path.resolve(__dirname, 'app'),
@@ -48,21 +49,17 @@ module.exports = {
                 test: /\.html$/,
                 loader: 'html-loader',
             },
+            {
+                test: /\.(png|jpg|jpeg|gif|svg)$/i,
+                type: 'asset/resource',
+            },
             // {
-            //     test: /\.(scss|css)$/,
-            //     use: ['style-loader', 'css-loader', 'sass-loader'],
+            //     test: /\.svg$/,
+            //     type: 'asset/resource',
+            //     generator: {
+            //         filename: path.join('img', '[name].[contenthash][ext]'),
+            //     }
             // },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            },
-            {
-                test: /\.svg$/,
-                type: 'asset/resource',
-                generator: {
-                    filename: path.join('img', '[name].[contenthash][ext]'),
-                }
-            },
 
             {
                 test: /\.css$/i,
@@ -84,3 +81,16 @@ module.exports = {
     }
 
 }
+
+
+// {
+//     test: /\.(png|jpg|jpeg|gif)$/i,
+//         type: 'asset/resource',
+// },
+// {
+//     test: /\.svg$/,
+//         type: 'asset/resource',
+//     generator: {
+//     filename: path.join('img', '[name].[contenthash][ext]'),
+// }
+// },
