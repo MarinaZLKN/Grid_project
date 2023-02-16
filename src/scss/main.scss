@@ -23,6 +23,30 @@ body {
     display: grid;
     grid-template-columns: 230px 20px 1fr 1fr 1fr;
 
+    header.header_box {
+      background-color: white;
+      padding: 47px 28px;
+      box-sizing: border-box;
+
+      img {
+        margin-bottom: 35px;
+        display: inline-block;
+      }
+
+      nav{
+        font-family: 'Oswald', sans-serif;
+        color: black;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 33px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+
     .grid-item {
       position: relative;
 
