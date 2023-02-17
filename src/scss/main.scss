@@ -43,6 +43,12 @@ body {
         a {
           color: inherit;
           text-decoration: none;
+          transition: 300ms ease-in-out;
+
+          §:hover {
+            color: #ffa800;
+            transition: 300ms ease-in-out;
+          }
         }
       }
     }
@@ -112,6 +118,21 @@ body {
   .statistic {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: white url("../img/map.jpg.webp") no-repeat center center;
+    background-size: cover;
+    opacity: 40%;
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows:  auto auto;
+
+      .info_block {
+        grid-column-start: 1;
+        grid-column-end: 4;
+      }
+    }
+
   }
 
   .gallery{
