@@ -19,7 +19,6 @@ module.exports = {
         filename: `./js/${filename('js')}`,
         path: path.resolve(__dirname, 'app'),
         assetModuleFilename: 'images/[name][ext]',
-            //path.join('img', '[name].[ext]'),
     },
     devServer: {
         watchFiles: path.resolve(__dirname, 'app'),
@@ -53,14 +52,6 @@ module.exports = {
                 test: /\.(png|jpg|jpeg|gif|svg)$/i,
                 type: 'asset/resource',
             },
-            // {
-            //     test: /\.svg$/,
-            //     type: 'asset/resource',
-            //     generator: {
-            //         filename: path.join('img', '[name].[contenthash][ext]'),
-            //     }
-            // },
-
             {
                 test: /\.css$/i,
                 use: [
@@ -83,14 +74,3 @@ module.exports = {
 }
 
 
-// {
-//     test: /\.(png|jpg|jpeg|gif)$/i,
-//         type: 'asset/resource',
-// },
-// {
-//     test: /\.svg$/,
-//         type: 'asset/resource',
-//     generator: {
-//     filename: path.join('img', '[name].[contenthash][ext]'),
-// }
-// },
