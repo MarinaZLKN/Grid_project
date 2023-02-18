@@ -1,0 +1,48 @@
+{
+  "people": [
+    {
+      "name": "Marina",
+      "age": 33,
+      "has_pet": true,
+      "id": 0
+    },
+    {
+      "id": 1,
+      "name": "Alissa",
+      "age": 36,
+      "has_pet": true
+    },
+    {
+      "id": 2,
+      "name": "Katja",
+      "age": 30,
+      "has_pet": false
+    },
+    {
+      "id": 3,
+      "name": "Alina",
+      "age": 37,
+      "has_pet": false
+    },
+    {
+      "id": 4,
+      "name": "Stiven",
+      "age": 5,
+      "has_pet": false,
+      "note": "Updated in Postman"
+    },
+    {
+      "id": 5,
+      "name": "Reiks",
+      "age": 40,
+      "has_pet": false
+    },
+    {
+      "id": 6,
+      "name": "Jung Sun-bin",
+      "age": 27,
+      "has_pet": false,
+      "note": "Made in Postman"
+    }
+  ]
+}
