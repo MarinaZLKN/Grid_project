@@ -6,7 +6,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f8f8;
 }
-.wrapper{
+.wrapper {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
@@ -19,7 +19,7 @@ body {
     //border: 1px solid black;
   }
 
-  .header{
+  .header {
     display: grid;
     grid-template-columns: 230px 20px 1fr 1fr 1fr;
 
@@ -33,7 +33,7 @@ body {
         display: inline-block;
       }
 
-      nav{
+      nav {
         font-family: 'Oswald', sans-serif;
         color: black;
         text-transform: uppercase;
@@ -69,7 +69,7 @@ body {
         height: 100%;
         top: 0;
         left: 0;
-        background-color: rgba(255, 198, 12, 0.91);
+        background-color: rgba(255, 198, 12, 0.6);
         opacity: 0;
         transition: 300ms ease-in-out;
       }
@@ -91,10 +91,11 @@ body {
           text-transform: uppercase;
 
         }
-        p{
+
+        p {
           //text-align: center;
           margin-bottom: 0;
-          color:  white;
+          color: white;
           font-size: 11px;
 
         }
@@ -105,10 +106,12 @@ body {
       width: 100%;
       background-image: url("../img/traveler.jpg");
     }
+
     .image_2 {
       width: 100%;
       background-image: url("../img/horses.jpg");
     }
+
     .image_3 {
       width: 100%;
       background-image: url("../img/man-hands.jpg");
@@ -129,11 +132,12 @@ body {
       padding: 70px;
       box-sizing: border-box;
 
-      .stats_1,.stats_2,.stats_3 {
+      .stats_1, .stats_2, .stats_3 {
         .stat_col {
           display: inline-block;
           text-align: center;
         }
+
         .number {
           color: rgba(255, 198, 12);
           font-size: 81px;
@@ -155,7 +159,7 @@ body {
         grid-column-start: 1;
         grid-column-end: 4;
 
-        h3{
+        h3 {
           color: black;
           font-family: 'Oswald', sans-serif;
           font-size: 21px;
@@ -181,11 +185,11 @@ body {
           font-family: 'Oswald', sans-serif;
           background: rgba(255, 198, 12);
           text-decoration: none;
-          transition:  all 300ms ease-in-out;
+          transition: all 300ms ease-in-out;
 
           §:hover {
             background: #000;
-            transition:  all 300ms ease-in-out;
+            transition: all 300ms ease-in-out;
           }
         }
       }
@@ -209,20 +213,111 @@ body {
     }
   }
 
-  .gallery{
+  .title {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    h4 {
+      color: black;
+      font-size: 16px;
+      font-family: 'Oswald', sans-serif;
+      text-transform: uppercase;
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+
+    .separator {
+      background-color: black;
+    }
+  }
+
+  .gallery {
     display: grid;
     grid-template-columns: 360px 1fr 1fr;
     grid-template-rows: 370px 370px;
     grid-gap: 19px;
 
-    .grid-item:first-child{
+    .grid-item:first-child {
       grid-row-start: 1;
       grid-row-end: 3;
     }
 
-    .grid-item:nth-child(2){
+    .grid-item:nth-child(2) {
       grid-column-start: 2;
       grid-column-end: 4;
+    }
+
+
+    .item_1 {
+      position: relative;
+      background-size: cover;
+      background-image: url("../img/tuulik.jpg");
+
+    }
+
+    .item_2 {
+      position: relative;
+      background-size: cover;
+      background-image: url("../img/bail.jpg");
+    }
+
+    .item_3 {
+      position: relative;
+      background-size: cover;
+      background-image: url("../img/thai.jpg");
+    }
+
+    .item_4 {
+      position: relative;
+      background-size: cover;
+      background-image: url("../img/rice-field.jpg");
+
+    }
+
+    .content_box {
+      position: absolute;
+      background-color: white;
+      padding: 30px;
+
+      h3 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 1px;
+        color: black;
+        text-transform: uppercase;
+      }
+
+      span{
+        font-family: 'Oswald', sans-serif;
+        font-size: 14px;
+        color: black;
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      p {
+        font-family: 'Oswald', sans-serif;
+        line-height: 18px;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+
+      §:nth-child(1) {
+        .content_box {
+          position: absolute;
+          right: 0;
+          bottom: 50px;
+          max-width: 235px;
+        }
+      }
+
+      §:nth-child(3) {
+        .content_box {
+          right: 0;
+          bottom: 0;
+        }
+      }
     }
   }
 }
