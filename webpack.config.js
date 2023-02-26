@@ -20,6 +20,9 @@ module.exports = {
         path: path.resolve(__dirname, 'app'),
         assetModuleFilename: 'images/[name][ext]',
     },
+    stats: {
+        children: true
+    },
     devServer: {
         watchFiles: path.resolve(__dirname, 'app'),
         open: true, //чтобы автоматически открывался файл
