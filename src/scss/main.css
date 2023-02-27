@@ -1,0 +1,308 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  color: #7f7f7f;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(520px, auto) minmax(467px, auto) minmax(16px, auto) auto;
+  grid-row-gap: 35px;
+}
+.wrapper .header {
+  display: grid;
+  grid-template-columns: 230px 20px 1fr 1fr 1fr;
+}
+.wrapper .header header.header_box {
+  background-color: white;
+  padding: 47px 28px;
+  box-sizing: border-box;
+}
+.wrapper .header header.header_box img {
+  margin-bottom: 35px;
+  display: inline-block;
+}
+.wrapper .header header.header_box nav {
+  font-family: "Oswald", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 33px;
+}
+.wrapper .header header.header_box nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+}
+.wrapper .header header.header_box nav a §:hover {
+  color: #ffa800;
+  transition: 300ms ease-in-out;
+}
+.wrapper .header .grid-item {
+  position: relative;
+}
+.wrapper .header .grid-item:hover .mask {
+  opacity: 1;
+  transition: 300ms ease-in-out;
+}
+.wrapper .header .grid-item .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 198, 12, 0.6);
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.wrapper .header .grid-item .info_box {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  padding-bottom: 43px;
+  text-align: center;
+}
+.wrapper .header .grid-item .info_box h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: white;
+  text-transform: uppercase;
+}
+.wrapper .header .grid-item .info_box p {
+  margin-bottom: 0;
+  color: white;
+  font-size: 11px;
+}
+.wrapper .header .image_1 {
+  width: 100%;
+  background-image: url("../img/traveler.jpg");
+}
+.wrapper .header .image_2 {
+  width: 100%;
+  background-image: url("../img/horses.jpg");
+}
+.wrapper .header .image_3 {
+  width: 100%;
+  background-image: url("../img/man-hands.jpg");
+}
+.wrapper .statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: white url("../img/map.jpg.webp") no-repeat center center;
+  background-size: cover;
+}
+.wrapper .statistic .info {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  padding: 70px;
+  box-sizing: border-box;
+}
+.wrapper .statistic .info .stats_1 .stat_col, .wrapper .statistic .info .stats_2 .stat_col, .wrapper .statistic .info .stats_3 .stat_col {
+  display: inline-block;
+  text-align: center;
+}
+.wrapper .statistic .info .stats_1 .number, .wrapper .statistic .info .stats_2 .number, .wrapper .statistic .info .stats_3 .number {
+  color: rgb(255, 198, 12);
+  font-size: 81px;
+  line-height: 81px;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  display: block;
+}
+.wrapper .statistic .info .stats_1 .description, .wrapper .statistic .info .stats_2 .description, .wrapper .statistic .info .stats_3 .description {
+  color: #7f7f7f;
+  font-size: 12px;
+  font-family: "Oswald", sans-serif;
+}
+.wrapper .statistic .info .info_block {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.wrapper .statistic .info .info_block h3 {
+  color: black;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.wrapper .statistic .info .info_block p {
+  font-size: 11px;
+  color: #7f7f7f;
+  line-height: 14px;
+  margin-bottom: 30px;
+}
+.wrapper .statistic .info .info_block .button {
+  display: inline-block;
+  padding: 7px 19px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+  line-height: 18px;
+  font-family: "Oswald", sans-serif;
+  background: rgb(255, 198, 12);
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+.wrapper .statistic .info .info_block .button §:hover {
+  background: #000;
+  transition: all 300ms ease-in-out;
+}
+.wrapper .statistic .video {
+  position: relative;
+  align-items: center;
+}
+.wrapper .statistic .video iframe {
+  padding: 70px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.wrapper .title {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+.wrapper .title h4 {
+  color: black;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.wrapper .title .separator {
+  background-color: black;
+}
+.wrapper .gallery {
+  display: grid;
+  grid-template-columns: 360px 1fr 1fr;
+  grid-template-rows: 370px 370px;
+  grid-gap: 19px;
+}
+.wrapper .gallery .grid-item:first-child {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.wrapper .gallery .grid-item:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+.wrapper .gallery .item_1 {
+  position: relative;
+  background-size: cover;
+  background-image: url("../img/tuulik.jpg");
+}
+.wrapper .gallery .item_2 {
+  position: relative;
+  background-size: cover;
+  background-image: url("../img/bail.jpg");
+}
+.wrapper .gallery .item_3 {
+  position: relative;
+  background-size: cover;
+  background-image: url("../img/thai.jpg");
+}
+.wrapper .gallery .item_4 {
+  position: relative;
+  background-size: cover;
+  background-image: url("../img/rice-field.jpg");
+}
+.wrapper .gallery .content_box {
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+}
+.wrapper .gallery .content_box h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 1px;
+  color: black;
+  text-transform: uppercase;
+}
+.wrapper .gallery .content_box span {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.wrapper .gallery .content_box p {
+  font-family: "Oswald", sans-serif;
+  line-height: 18px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+.wrapper .gallery .content_box §:nth-child(1) .content_box {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  max-width: 235px;
+}
+.wrapper .gallery .content_box §:nth-child(3) .content_box {
+  right: 0;
+  bottom: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
